@@ -87,6 +87,14 @@ public class AulaInformatica extends Aula {
      *
      * Retorn: cap
      */
+    @Override
+    public void updateUnitatUniversitat() {
+        super.updateUnitatUniversitat();
+        System.out.println("Metres quadrats actuals: " + getAreaEnMetresQuadrats());
+        System.out.println("Introdueix els nous metres quadrats");
+        areaEnMetresQuadrats = DADES.nextDouble();
+        setAreaEnMetresQuadrats(areaEnMetresQuadrats);
+    }
 
     /*
      * TODO
@@ -99,6 +107,10 @@ public class AulaInformatica extends Aula {
      *
      * Retorn: cap
      */
+    @Override
+    public void showUnitatUniversitat() {
+        super.showUnitatUniversitat();
+    }
 
     /*
      * TODO

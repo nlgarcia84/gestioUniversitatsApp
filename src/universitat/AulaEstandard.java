@@ -72,6 +72,11 @@ public class AulaEstandard extends Aula {
      * 
      * Retorn: cap
      */
+    @Override
+    public void updateUnitatUniversitat() {
+        super.updateUnitatUniversitat();
+    }
+
     /*
      * TODO
      *
@@ -84,6 +89,9 @@ public class AulaEstandard extends Aula {
      * 
      * Retorn: cap
      */
+    public void showUnitatUniversitat() {
+        super.showUnitatUniversitat();
+    }
 
     /*
      * TODO
