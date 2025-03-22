@@ -50,22 +50,6 @@ public abstract class Campus implements UnitatUniversitat {
         this.aula = aula;
     }
 
-    public int getpAula() {
-        return pAula;
-    }
-
-    public void setpAula(int pAula) {
-        this.pAula = pAula;
-    }
-
-    public int getTipusAula() {
-        return tipusAula;
-    }
-
-    public void setTipusAula(int tipusAula) {
-        this.tipusAula = tipusAula;
-    }
-
     // Mètode per afegir un nou campus
     public static Campus addCampus() {
         String nom, ubicacio;
