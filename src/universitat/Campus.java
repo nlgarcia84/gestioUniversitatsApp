@@ -138,7 +138,7 @@ public class Campus implements UnitatUniversitat {
         System.out.println("\n2=Aula Informàtica");
         System.out.println("\n3=Laboratori");
         tipusAula = UnitatUniversitat.DADES.nextInt();
-        DADES.nextLine(); // netegem buffer
+        UnitatUniversitat.DADES.nextLine(); // netegem buffer
 
         if (codi == null) {
             System.out.println("\nIntrodueixi el codi de l'aula a seleccionar:");
@@ -150,8 +150,6 @@ public class Campus implements UnitatUniversitat {
                 return i;
             }
         }
-
         return -1;
     }
-
 }
