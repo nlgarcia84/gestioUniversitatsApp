@@ -4,14 +4,11 @@
  */
 package universitat;
 
-import java.util.Scanner;
-
 /**
  *
  * @author fgarin
  */
 public class AulaInformatica extends Aula {
-    private final static Scanner DADES = new Scanner(System.in);
 
     // Atributs propis
     private double areaEnMetresQuadrats;
@@ -35,6 +32,7 @@ public class AulaInformatica extends Aula {
      * TODO Heu d'implementar tots els mètodes accessors possibles.
      */
 
+    // Mètodes accessors exclusius de AulaInformatica, la resta els hereta de Aula
     public double getAreaEnMetresQuadrats() {
         return this.areaEnMetresQuadrats;
     }
@@ -89,12 +87,6 @@ public class AulaInformatica extends Aula {
      *
      * Retorn: cap
      */
-    public void updateAulaInformatica() {
-        super.updateUnitatUniversitat();
-        System.out.println("\nÀrea en metres quadrats de l'aula de informatica: " + this.getAreaEnMetresQuadrats());
-        System.out.println("Entra el nou valor de l'àrea en metres quadrats de l'aula de informatica:");
-        areaEnMetresQuadrats = Double.parseDouble(DADES.nextLine());
-    }
 
     /*
      * TODO
@@ -107,10 +99,6 @@ public class AulaInformatica extends Aula {
      *
      * Retorn: cap
      */
-    public void showAulaInformatica() {
-        super.showUnitatUniversitat();
-        System.out.println("\nCost de manteniment: " + this.costManteniment() + " EUR");
-    }
 
     /*
      * TODO
@@ -126,6 +114,7 @@ public class AulaInformatica extends Aula {
      *
      * Retorn: cost de manteniment de l'aula (double).
      */
+    @Override
     public double costManteniment() {
         return (this.getCostPerDia() * 0.3) + (this.getAreaEnMetresQuadrats() * 0.05);
     }

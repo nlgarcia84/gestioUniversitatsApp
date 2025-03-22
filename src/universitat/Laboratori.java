@@ -4,14 +4,11 @@
  */
 package universitat;
 
-import java.util.Scanner;
-
 /**
  *
  * @author fgarin
  */
 public class Laboratori extends Aula {
-    private final static Scanner DADES = new Scanner(System.in);
 
     private int capacitat;
 
@@ -112,7 +109,6 @@ public class Laboratori extends Aula {
     public void showLaboratori() {
         super.showUnitatUniversitat();
         System.out.println("\nCapacitat: " + this.getCapacitat());
-        System.out.println("\nCost de manteniment: " + this.costManteniment() + " EUR");
     }
 
     /*
@@ -129,6 +125,7 @@ public class Laboratori extends Aula {
      *
      * Retorn: Cost de manteniment de la motocicleta actual (double).
      */
+    @Override
     public double costManteniment() {
         return (double) (this.getCostPerDia() * 0.35) + (this.getCapacitat() * 0.10);
     }

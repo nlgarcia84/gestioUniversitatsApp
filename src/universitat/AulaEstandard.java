@@ -72,11 +72,6 @@ public class AulaEstandard extends Aula {
      * 
      * Retorn: cap
      */
-    public void updateAulaEstandard() {
-        super.updateUnitatUniversitat();
-        System.out.println("\nCost de manteniment: " + this.costManteniment() + " EUR");
-    }
-
     /*
      * TODO
      *
@@ -89,10 +84,6 @@ public class AulaEstandard extends Aula {
      * 
      * Retorn: cap
      */
-    public void showAulaEstandard() {
-        super.showUnitatUniversitat();
-        System.out.println("\nCost de manteniment: " + this.costManteniment() + " EUR");
-    }
 
     /*
      * TODO
@@ -108,6 +99,7 @@ public class AulaEstandard extends Aula {
      * 
      * Retorn: cost de manteniment de l'aula (double).
      */
+    @Override
     public double costManteniment() {
         return (this.getCostPerDia() * 0.2);
     }
