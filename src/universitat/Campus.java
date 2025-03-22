@@ -14,7 +14,6 @@ public class Campus implements UnitatUniversitat {
 
     private String nomCampus;
     private String ubicacio;
-    private int tipusAula;
 
     private Aula[] aula = new Aula[300];
     private int pAula = 0;
@@ -146,8 +145,23 @@ public class Campus implements UnitatUniversitat {
         }
 
         for (int i = 0; i < pAula; i++) {
-            if (aula[i].getCodi().equals(codi)) {
-                return i;
+            switch (tipusAula) {
+                case 1:
+                    if (aula[i].getCodi().equals(codi) && aula[i] instanceof AulaEstandard) {
+                        return i;
+                    }
+                    break;
+                case 2:
+                    if (aula[i].getCodi().equals(codi) && aula[i] instanceof AulaInformatica) {
+                        return i;
+                    }
+                    break;
+                case 3:
+                    if (aula[i].getCodi().equals(codi) && aula[i] instanceof Laboratori) {
+                        return i;
+                    }
+                default:
+                    break;
             }
         }
         return -1;
