@@ -10,7 +10,7 @@ package universitat;
  *
  * @author fgarin
  */
-public abstract class Campus implements UnitatUniversitat {
+public class Campus implements UnitatUniversitat {
 
     private String nomCampus;
     private String ubicacio;
@@ -63,7 +63,8 @@ public abstract class Campus implements UnitatUniversitat {
     }
 
     // Mètode per actualitzar un campus existent
-    public void updateCampus() {
+    @Override
+    public void updateUnitatUniversitat() {
         System.out.println("\nNom del campus: " + this.getNomCampus());
         System.out.println("\nEntra el nou nom del campus:");
         this.nomCampus = UnitatUniversitat.DADES.nextLine();
@@ -86,7 +87,8 @@ public abstract class Campus implements UnitatUniversitat {
     }
 
     // Mètode mostra tota la info del campus
-    public void showCampus() {
+    @Override
+    public void showUnitatUniversitat() {
         System.out.println("\nLes dades del campus " + this.nomCampus + " són: ");
         System.out.println("\nUbicació: " + this.getUbicacio());
         System.out.println("\nCost de manteniment: " + this.costManteniment() + " EUR");
