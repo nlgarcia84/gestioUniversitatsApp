@@ -49,6 +49,10 @@ public class Campus implements UnitatUniversitat {
         this.aula = aula;
     }
 
+    public int getPaula() {
+        return pAula;
+    }
+
     // Mètode per afegir un nou campus
     public static Campus addCampus() {
         String nom, ubicacio;

@@ -201,9 +201,9 @@ public class Application {
                 case 3:
                     for (int i = 0; i < universitatActual.getpCampus(); i++) {
 
-                        for (int j = 0; j < universitatActual.getCampus()[i].getpAulesEstandard(); j++) {
+                        for (int j = 0; j < universitatActual.getCampus()[i].getPaula(); j++) {
 
-                            universitatActual.getCampus()[i].getAulesEstandard()[j].showAulaEstandard();
+                            universitatActual.getCampus()[i].getAula()[j].showUnitatUniversitat();
 
                         }
                     }
