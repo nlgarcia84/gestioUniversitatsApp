@@ -26,7 +26,9 @@ public class Application {
             System.out.println("\n0. Sortir");
             System.out.println("\n1. Gestió de universitats");
             System.out.println("\n2. Gestió de campus");
-            System.out.println("\n3. Gestió d'aules");
+            System.out.println("\n3. Gestió d'aules estàndard");
+            System.out.println("\n4. Gestió d'aules d'informatica");
+            System.out.println("\n5. Gestió de laboratoris");
             System.out.println("\n");
 
             opcio = Integer.parseInt(DADES.nextLine());
@@ -47,14 +49,23 @@ public class Application {
                     break;
                 case 3:
                     if (universitatActual != null) {
-                        if (universitatActual.getCampus() != null) {
-                            System.out.println("\nPrimer s'ha d'introduir un campus al menú 2. Gestió de campus.");
-                        } else {
-                            menuAules();
-                        }
+                        menuAules(1);
                     } else {
-                        System.out.println(
-                                "\nPrimer s'ha de seleccionar la universitat al menú 1. Gestió de universitats.");
+                        System.out.println("\nPrimer s'ha de seleccionar el campus al menú 1. Gestió de campus.");
+                    }
+                    break;
+                case 4:
+                    if (universitatActual != null) {
+                        menuAules(2);
+                    } else {
+                        System.out.println("\nPrimer s'ha de seleccionar el campus al menú 1. Gestió de campus.");
+                    }
+                    break;
+                case 5:
+                    if (universitatActual != null) {
+                        menuAules(3);
+                    } else {
+                        System.out.println("\nPrimer s'ha de seleccionar el campus al menú 1. Gestió de campus.");
                     }
                     break;
                 default:
@@ -165,8 +176,7 @@ public class Application {
         } while (opcio != 0);
     }
 
-    public static void menuAules() {
-        int opcio;
+    public static void menuAules(int opcio) {
 
         do {
             System.out.println("\nMenú d'aules. Selecciona una opció");
