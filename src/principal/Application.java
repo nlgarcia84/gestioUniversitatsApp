@@ -26,9 +26,7 @@ public class Application {
             System.out.println("\n0. Sortir");
             System.out.println("\n1. Gestió de universitats");
             System.out.println("\n2. Gestió de campus");
-            System.out.println("\n3. Gestió d'aules estàndard");
-            System.out.println("\n4. Gestió d'aules d'informatica");
-            System.out.println("\n5. Gestió de laboratoris");
+            System.out.println("\n3. Gestió d'aules");
             System.out.println("\n");
 
             opcio = Integer.parseInt(DADES.nextLine());
@@ -48,20 +46,6 @@ public class Application {
                     }
                     break;
                 case 3:
-                    if (universitatActual != null) {
-                        menuAules();
-                    } else {
-                        System.out.println("\nPrimer s'ha de seleccionar el campus al menú 1. Gestió de campus.");
-                    }
-                    break;
-                case 4:
-                    if (universitatActual != null) {
-                        menuAules();
-                    } else {
-                        System.out.println("\nPrimer s'ha de seleccionar el campus al menú 1. Gestió de campus.");
-                    }
-                    break;
-                case 5:
                     if (universitatActual != null) {
                         menuAules();
                     } else {
