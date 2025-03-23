@@ -47,9 +47,14 @@ public class Application {
                     break;
                 case 3:
                     if (universitatActual != null) {
-                        menuAules();
+                        if (universitatActual.getCampus() != null) {
+                            System.out.println("\nPrimer s'ha d'introduir un campus al menú 2. Gestió de campus.");
+                        } else {
+                            menuAules();
+                        }
                     } else {
-                        System.out.println("\nPrimer s'ha de seleccionar el campus al menú 1. Gestió de campus.");
+                        System.out.println(
+                                "\nPrimer s'ha de seleccionar la universitat al menú 1. Gestió de universitats.");
                     }
                     break;
                 default:
