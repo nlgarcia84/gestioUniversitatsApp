@@ -136,10 +136,6 @@ public class Campus implements UnitatUniversitat {
     // Mètode per seleccionar l'aula
     public int selectAula(int tipusAula, String codi) {
 
-        System.out.println("\n¿Quin tipus d'aula vol seleccionar?");
-        System.out.println("\n1=Aula Estandard");
-        System.out.println("\n2=Aula Informàtica");
-        System.out.println("\n3=Laboratori");
         tipusAula = UnitatUniversitat.DADES.nextInt();
         UnitatUniversitat.DADES.nextLine(); // netegem buffer
 

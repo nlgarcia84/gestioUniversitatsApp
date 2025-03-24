@@ -41,18 +41,15 @@ public class AulaEstandard extends Aula {
      * Retorn: Objecte AulaEstandard creat.
      */
     public static AulaEstandard addAulaEstandard() {
-        String codi;
-        int numeroAula;
-        double costPerDia;
 
         System.out.println("\nCodi de l'aula: ");
-        codi = DADES.nextLine();
+        String codi = DADES.nextLine();
 
         System.out.println("\nNúmero de l'aula: ");
-        numeroAula = Integer.parseInt(DADES.nextLine());
+        int numeroAula = Integer.parseInt(DADES.nextLine());
 
         System.out.println("\nCost per dia de l'aula: ");
-        costPerDia = Double.parseDouble(DADES.nextLine());
+        double costPerDia = Double.parseDouble(DADES.nextLine());
 
         return new AulaEstandard(codi, numeroAula, costPerDia);
     }

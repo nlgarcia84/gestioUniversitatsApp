@@ -193,20 +193,28 @@ public class Application {
                     break;
                 case 1:
                     if (tipusAula == 1) {
+                        System.out.println("\nEstas donant d'alta una aula estandard");
                         universitatActual.addAulaEstandardCampus();
-                        break;
                     }
                     if (tipusAula == 2) {
+                        System.out.println("\nEstas donant d'alta una aula d'informatica");
                         universitatActual.addAulaInformaticaCampus();
-                        break;
                     }
                     if (tipusAula == 3) {
+                        System.out.println("\nEstas donant d'alta un laboratori");
                         universitatActual.addLaboratoriCampus();
-                        break;
                     }
-
+                    break;
                 case 2:
-                    universitatActual.updateUnitatUniversitat();
+                    if (tipusAula == 1) {
+                        universitatActual.updateAulaEstandardCampus();
+                    }
+                    if (tipusAula == 2) {
+                        universitatActual.updateAulaInformaticaCampus();
+                    }
+                    if (tipusAula == 3) {
+                        universitatActual.updateLaboratoriCampus();
+                    }
                     break;
                 case 3:
                     for (int i = 0; i < universitatActual.getpCampus(); i++) {
