@@ -176,8 +176,8 @@ public class Application {
         } while (opcio != 0);
     }
 
-    public static void menuAules(int opcio) {
-
+    public static void menuAules(int tipusAula) {
+        int opcio;
         do {
             System.out.println("\nMenú d'aules. Selecciona una opció");
             System.out.println("\n0. Sortir");
@@ -192,10 +192,21 @@ public class Application {
                 case 0:
                     break;
                 case 1:
-                    universitatActual.addAulaEstandardCampus();
-                    break;
+                    if (tipusAula == 1) {
+                        universitatActual.addAulaEstandardCampus();
+                        break;
+                    }
+                    if (tipusAula == 2) {
+                        universitatActual.addAulaInformaticaCampus();
+                        break;
+                    }
+                    if (tipusAula == 3) {
+                        universitatActual.addLaboratoriCampus();
+                        break;
+                    }
+
                 case 2:
-                    universitatActual.updateAulaEstandardCampus();
+                    universitatActual.updateUnitatUniversitat();
                     break;
                 case 3:
                     for (int i = 0; i < universitatActual.getpCampus(); i++) {
