@@ -193,15 +193,12 @@ public class Application {
                     break;
                 case 1:
                     if (tipusAula == 1) {
-                        System.out.println("\nEstas donant d'alta una aula estandard");
                         universitatActual.addAulaEstandardCampus();
                     }
                     if (tipusAula == 2) {
-                        System.out.println("\nEstas donant d'alta una aula d'informatica");
                         universitatActual.addAulaInformaticaCampus();
                     }
                     if (tipusAula == 3) {
-                        System.out.println("\nEstas donant d'alta un laboratori");
                         universitatActual.addLaboratoriCampus();
                     }
                     break;

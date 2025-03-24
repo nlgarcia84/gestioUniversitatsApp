@@ -129,17 +129,21 @@ public class Universitat implements UnitatUniversitat {
     }
 
     public void updateAulaEstandardCampus() {
+        // Comprobem si existeix el campus seleccionat
         int indexCampus = selectCampus(null);
-
+        // Si el campus indicat existeix, llavors accedim a ell i seleccionem l'aula
+        // pasant el tipus i el codi
         if (indexCampus != -1) {
-            int indexAula = campus[indexCampus].selectAula(indexCampus, nomUniversitat);
-
+            int indexAula = campus[indexCampus].selectAula(1, null);
+            // Si troba l'aula l'actualitza
             if (indexAula != -1) {
                 campus[indexCampus].getAula()[indexAula].updateUnitatUniversitat();
             } else {
+                // Si no existeix l'aula retorna per terminal que no existeix
                 System.out.println("\nL'aula estàndard no existeix");
             }
         } else {
+            // Si no existeix el campus retorna per terminal que no existeix
             System.out.println("\nEl campus no existeix");
         }
     }
@@ -158,7 +162,7 @@ public class Universitat implements UnitatUniversitat {
         int indexCampus = selectCampus(null);
 
         if (indexCampus != -1) {
-            int indexAulaInformatica = campus[indexCampus].selectAula(indexCampus, nomUniversitat);
+            int indexAulaInformatica = campus[indexCampus].selectAula(2, null);
 
             if (indexAulaInformatica != -1) {
                 campus[indexCampus].getAula()[indexAulaInformatica].updateUnitatUniversitat();
@@ -184,7 +188,7 @@ public class Universitat implements UnitatUniversitat {
         int indexCampus = selectCampus(null);
 
         if (indexCampus != -1) {
-            int indexLaboratori = campus[indexCampus].selectAula(indexCampus, nomUniversitat);
+            int indexLaboratori = campus[indexCampus].selectAula(3, null);
 
             if (indexLaboratori != -1) {
                 campus[indexCampus].getAula()[indexLaboratori].updateUnitatUniversitat();
