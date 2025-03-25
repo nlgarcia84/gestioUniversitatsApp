@@ -1,14 +1,7 @@
-/*
- * Classe que defineix una aula estàndard d'una universitat. 
- * Es defineixen pel seu codi, número d'aula i el seu cost per dia.
- */
 package universitat;
 
-/**
- *
- * @author fgarin
- */
 public class AulaEstandard extends Aula {
+    // Les propietats les hereta totes de la clase pare
 
     // Mètode constructor
     public AulaEstandard(String codi, int numeroAula, double costPerDia) {

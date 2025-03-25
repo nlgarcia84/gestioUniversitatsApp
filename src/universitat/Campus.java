@@ -6,19 +6,16 @@
 
 package universitat;
 
-/**
- *
- * @author fgarin
- */
 public class Campus implements UnitatUniversitat {
 
+    // Propietats
     private String nomCampus;
     private String ubicacio;
 
     private Aula[] aula = new Aula[300];
     private int pAula = 0;
 
-    // Mètode constructor de la clase campus
+    // Mètode constructor de la classe campus
     public Campus(String nomCampus, String ubicacio) {
         this.nomCampus = nomCampus;
         this.ubicacio = ubicacio;
@@ -53,7 +50,7 @@ public class Campus implements UnitatUniversitat {
         return pAula;
     }
 
-    // Mètode per afegir un nou campus
+    // Mètodes de classe
     public static Campus addCampus() {
         String nom, ubicacio;
 

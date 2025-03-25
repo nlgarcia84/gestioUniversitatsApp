@@ -1,16 +1,8 @@
-/*
- * Classe que defineix una aula d'informàtica d'una universitat. 
- * Es defineix pel seu codi, número d'aula, el seu cost per dia i el tamany de l'aula en metres quadrats.
- */
 package universitat;
 
-/**
- *
- * @author fgarin
- */
 public class AulaInformatica extends Aula {
 
-    // Atributs propis
+    // Hereta atributs d'Aula i afegim la propia areaEnMetresQuadrats
     private double areaEnMetresQuadrats;
 
     // Mètode constructor
@@ -28,6 +20,7 @@ public class AulaInformatica extends Aula {
         this.areaEnMetresQuadrats = areaEnMetresQuadrats;
     }
 
+    // Mètodes de classe
     public static AulaInformatica addAulaInformatica() {
         System.out.println("\nCodi de l'aula de informatica: ");
         String codi = DADES.nextLine();

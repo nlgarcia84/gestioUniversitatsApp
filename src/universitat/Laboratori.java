@@ -1,15 +1,8 @@
-/*
- * Classe que defineix un Laboratori d'una universitat.
- * Es defineix pel seu codi, numeroLaboratori, cost per dia i la seva capacitat en nombre de persones.
- */
 package universitat;
 
-/**
- *
- * @author fgarin
- */
 public class Laboratori extends Aula {
 
+    // Hereta les propietats de Aula i afegim la propia que es capacitat
     private int capacitat;
 
     // Mètode constructor
