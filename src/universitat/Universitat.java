@@ -11,16 +11,19 @@ package universitat;
  */
 public class Universitat implements UnitatUniversitat {
 
+    // Propietats
     private String nomUniversitat;
     private String ubicacioSeu;
     private Campus[] campus = new Campus[5];
     private int pCampus = 0; // Primera posició buida de l'array de campus
 
+    // Mètode constructor
     public Universitat(String nomUniversitat, String ubicacioSeu) {
         this.nomUniversitat = nomUniversitat;
         this.ubicacioSeu = ubicacioSeu;
     }
 
+    // Mètodes accessors
     public String getNomUniversitat() {
         return nomUniversitat;
     }
@@ -53,6 +56,7 @@ public class Universitat implements UnitatUniversitat {
         this.pCampus = pCampus;
     }
 
+    // Mètodes de classe
     public static Universitat addUniversitat() {
         String nomUniversitat, ubicacioSeu;
 
@@ -65,6 +69,7 @@ public class Universitat implements UnitatUniversitat {
     }
 
     @Override
+    // Implementació mètode de la interficie UnitatUniversitat
     public void updateUnitatUniversitat() {
         System.out.println("\nNom de la universitat: " + nomUniversitat);
         System.out.println("\nEntra el nou nom:");
@@ -85,6 +90,7 @@ public class Universitat implements UnitatUniversitat {
     }
 
     @Override
+    // Implementació mètode de la interficie UnitatUniversitat
     public void showUnitatUniversitat() {
         System.out.println("\nLes dades de la universitat " + nomUniversitat + " són: ");
         System.out.println("\nUbicació: " + ubicacioSeu);

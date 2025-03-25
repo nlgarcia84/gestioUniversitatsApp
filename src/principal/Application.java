@@ -192,6 +192,7 @@ public class Application {
                 case 0:
                     break;
                 case 1:
+                    // Truquem al mètode corresponent en funció del tipusAula que li pasem
                     if (tipusAula == 1) {
                         universitatActual.addAulaEstandardCampus();
                     }
@@ -203,6 +204,7 @@ public class Application {
                     }
                     break;
                 case 2:
+                    // Truquem al mètode corresponent en funció del tipusAula que li pasem
                     if (tipusAula == 1) {
                         universitatActual.updateAulaEstandardCampus();
                     }
@@ -232,7 +234,6 @@ public class Application {
 
     public static Integer selectUniversitat(Universitat Universitat) {
         String nom;
-
         if (Universitat == null) {
             System.out.println("\nNom de la universitat:");
             nom = DADES.nextLine();

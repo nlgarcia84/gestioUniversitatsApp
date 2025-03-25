@@ -12,25 +12,13 @@ public class Laboratori extends Aula {
 
     private int capacitat;
 
-    /*
-     * TODO CONSTRUCTOR
-     *
-     * Nom del mètode: Laboratori
-     *
-     * Paràmetres: valors per tots els atributs de la classe.
-     *
-     * Accions:
-     * - Assignar als atributs corresponents els valors passats com a paràmetres.
-     */
+    // Mètode constructor
     public Laboratori(String codi, int numeroLaboratori, double costPerDia, int capacitat) {
         super(codi, numeroLaboratori, costPerDia);
         this.capacitat = capacitat;
     }
 
-    /*
-     * TODO Heu d'implementar tots els mètodes accessors possibles.
-     */
-
+    // Mètodes accessors exclusius de AulaInformatica, la resta els hereta de Aula
     public int getCapacitat() {
         return this.capacitat;
     }
@@ -39,20 +27,6 @@ public class Laboratori extends Aula {
         this.capacitat = capacitat;
     }
 
-    /*
-     * TODO
-     *
-     * Nom del mètode: addLaboratori
-     *
-     * Paràmetres: cap
-     *
-     * Accions:
-     * - Demanar les dades per consola per crear un Laboratori.
-     * Les dades a demanar són les que necessita
-     * el constructor.
-     * 
-     * Retorn: Objecte Laboratori creat.
-     */
     public static Laboratori addLaboratori() {
         System.out.println("\nCodi del Laboratori: ");
         String codi = DADES.nextLine();
@@ -69,23 +43,10 @@ public class Laboratori extends Aula {
         return new Laboratori(codi, numeroLaboratori, costPerDia, capacitat);
     }
 
-    /*
-     * TODO
-     *
-     * Nom del mètode: updateLaboratori
-     *
-     * Paràmetres: cap
-     *
-     * Accions:
-     * - Demanar a l'usuari que introdueixi les noves dades del Laboratori i
-     * modificar els
-     * atributs corresponents d'aquest Laboratori.
-     * - Li heu de mostrar a l'usuari els valors dels atributs abans de
-     * modificar-los.
-     *
-     * Retorn: cap
-     */
-    public void updateLaboratori() {
+    @Override
+    // Implementació del mètode updateUnitatUniversitat de la Interficie
+    // UnitatUniversitat
+    public void updateUnitatUniversitat() {
         super.updateUnitatUniversitat();
         System.out.println("\nCost de manteniment: " + this.costManteniment() + " EUR");
         System.out.println("\nCapacitat del Laboratori: " + this.getCapacitat());
@@ -93,39 +54,16 @@ public class Laboratori extends Aula {
         capacitat = Integer.parseInt(DADES.nextLine());
     }
 
-    /*
-     * TODO
-     *
-     * Nom del mètode: showLaboratori
-     *
-     * Paràmetres: cap
-     *
-     * Accions:
-     * - Mètode per mostrar les dades del Laboratori actual i el cost del seu
-     * manteniment.
-     * 
-     * Retorn: cap
-     */
-    public void showLaboratori() {
+    @Override
+    // Implementació del mètode showUnitatUniversitat de la Interficie
+    // UnitatUniversitat
+    public void showUnitatUniversitat() {
         super.showUnitatUniversitat();
         System.out.println("\nCapacitat: " + this.getCapacitat());
     }
 
-    /*
-     * TODO
-     *
-     * Nom del mètode: costManteniment
-     *
-     * Paràmetres: cap
-     *
-     * Accions:
-     * - Mètode que retornarà el cost del manteniment del Laboratori actual.
-     * - El cost del manteniment per dia és un 35% del cost per dia del laboratori +
-     * un 10% de la seva capacitat
-     *
-     * Retorn: Cost de manteniment de la motocicleta actual (double).
-     */
     @Override
+    // Implementació del mètode declarat a la clase pare Aula.java
     public double costManteniment() {
         return (double) (this.getCostPerDia() * 0.35) + (this.getCapacitat() * 0.10);
     }

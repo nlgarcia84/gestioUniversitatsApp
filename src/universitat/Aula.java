@@ -5,6 +5,7 @@ package universitat;
  */
 public abstract class Aula implements UnitatUniversitat {
 
+  // Propietats
   private String codi;
   private int numeroAula;
   private double costPerDia;
